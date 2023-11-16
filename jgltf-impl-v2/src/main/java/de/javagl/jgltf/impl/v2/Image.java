@@ -77,8 +77,11 @@ public class Image
             this.mimeType = mimeType;
             return ;
         }
-        if ((!"image/jpeg".equals(mimeType))&&(!"image/png".equals(mimeType))) {
-            throw new IllegalArgumentException((("Invalid value for mimeType: "+ mimeType)+", valid: [\"image/jpeg\", \"image/png\"]"));
+        if ((!"image/jpeg".equals(mimeType))
+                && (!"image/png".equals(mimeType))
+                && (!"image/webp".equals(mimeType))) {
+            throw new IllegalArgumentException((("Invalid value for mimeType: " + mimeType)
+                    + ", valid: [\"image/jpeg\", \"image/png\",  \"image/webp\"]"));
         }
         this.mimeType = mimeType;
     }

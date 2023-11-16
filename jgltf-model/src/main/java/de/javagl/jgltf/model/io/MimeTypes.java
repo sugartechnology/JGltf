@@ -236,6 +236,11 @@ public class MimeTypes
         {
             return "gif";
         }
+        
+        if ("image/webp".equals(mimeTypeString))
+        {
+            return "webp";
+        }
         logger.warning("Invalid MIME type string: " + mimeTypeString);
         return null;
     }
